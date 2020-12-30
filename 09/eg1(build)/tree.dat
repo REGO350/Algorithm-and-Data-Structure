@@ -1,0 +1,9 @@
+N 0 apple
+N 1 banana
+N 2 cherry
+N 3 mango
+N 4 melon
+L 0 1
+R 0 4
+L 1 2
+R 1 3
