@@ -58,11 +58,11 @@ void printTree(Node *n) {
 
 void deleteTree(Node *n) {
   if (n != NULL) {
-  // (ここに再帰呼び出しが必要かもしれない)
-  if (n->data != NULL)
-    free(n->data);
-  // (ここに再帰呼び出しが必要かもしれない)
-  free(n);
-  // (ここに再帰呼び出しが必要かもしれない)
+    // (ここに再帰呼び出しが必要かもしれない)
+    if (n->data != NULL)
+      free(n->data);
+    // (ここに再帰呼び出しが必要かもしれない)
+    free(n);
+    // (ここに再帰呼び出しが必要かもしれない)
   }
 }
