@@ -58,8 +58,8 @@ void printTree(Node *n) {
 
 void deleteTree(Node *n) {
   if (n != NULL) { //Nodeが空でなければ
-    deleteTree(n->left); //左のNodeを空にする
-    deleteTree(n->right); //右のNodeを空にする
+    deleteTree(n->left); //左のNodeを空にする（再帰的呼び出し）
+    deleteTree(n->right); //右のNodeを空にする（再帰的呼び出し）
     if (n->data != NULL) //Nodeのデータが空でなければ
       free(n->data); //データに確保したメモリ開放
     free(n); //Nodeに確保したメモリ開放
