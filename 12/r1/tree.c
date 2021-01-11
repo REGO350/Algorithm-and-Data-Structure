@@ -18,7 +18,7 @@ Node *newNodeBST(int key){
   n = (Node *)malloc(sizeof(Node));
   n->id = key;
   n->left = n->right = NULL;
-  n->data = NULL; // 本来は，登録データのアドレスを代入するが省略
+  n->data = NULL;
   return n;
 }
 
@@ -72,7 +72,6 @@ static int idx = 0;
 void saveKeyInOrder(Node *n, int *d) {
   if (n != NULL) { // DFS走査においてinOrder(通りがけ)処理を行う
     saveKeyInOrder(n->left, d);
-    d[idx++] = n->key;
+    d[idx++] = n->id;
     saveKeyInOrder(n->right, d);
   }
-}
