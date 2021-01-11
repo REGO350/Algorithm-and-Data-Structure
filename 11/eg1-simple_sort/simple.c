@@ -1,3 +1,8 @@
+void swap(int *data, int i, int j) {
+  int t;
+  t = data[i]; data[i] = data[j]; data[j] = t;
+}
+
 void simplesort(int *data, int N) {
   int i, j;
 

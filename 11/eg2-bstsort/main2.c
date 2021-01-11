@@ -9,6 +9,7 @@ extern void buildBST(Node *n, int key);
 int main(int argc, char **argv) {
   int i, n, dArray[NMAX], sArray[NMAX];
   Node *root;
+
   if (argc == 2)
     n = (int)atoi(argv[1]);
   else {
