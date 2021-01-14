@@ -57,13 +57,12 @@ void printTree(Node *n) {
 }
 
 void deleteTree(Node *n) {
-  if (n != NULL) {
-    // (ここに再帰呼び出しが必要かもしれない)
-    if (n->data != NULL)
-      free(n->data);
-    // (ここに再帰呼び出しが必要かもしれない)
-    free(n);
-    // (ここに再帰呼び出しが必要かもしれない)
+  if (n != NULL) { //Nodeが空でなければ
+    deleteTree(n->left); //左のNodeを空にする（再帰的呼び出し）
+    deleteTree(n->right); //右のNodeを空にする（再帰的呼び出し）
+    if (n->data != NULL) //Nodeのデータが空でなければ
+      free(n->data); //データに確保したメモリ開放
+    free(n); //Nodeに確保したメモリ開放
   }
 }
 
