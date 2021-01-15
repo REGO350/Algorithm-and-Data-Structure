@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-#include "heap2.h"
-#include "array2.h"
+#include "heap3.h"
+#include "array3.h"
 
 int getDataInArray(Data *a, FILE *f) {
   char line[512], *s;
@@ -29,6 +29,6 @@ void swap(Data *a, int i, int j) {
 void printArray(Data *a, int n) {
   int i;
   for (i=0; i<n; i++)
-    printf("%8d", a[i+1]);
+  printf("%6d", a[i+1]);
   printf("\n");
 }
