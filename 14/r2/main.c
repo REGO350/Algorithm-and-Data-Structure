@@ -10,9 +10,9 @@ int main() {
   // stdin は main() で定義されている標準入力
   n = getDataInArray(a, stdin);
   
-  printArrayQS(a, 1, n, "input data");
+  printArrayQS(a, 1, n-1, "input data");
   
-  count = quicksort(a, 1, n);
+  count = quicksort(a, 1, n-1);
   
   printArrayQS(a, 1, n, "sorted");
   printf("Calculation count: %d\n", count);

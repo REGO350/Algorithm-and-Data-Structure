@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "array3.h"
 
-int quicksort(Data *a, int l, int r) {
+int quicksort(Data *a, int l, int r) { //a,1,n
   int t; // データを仕分ける基準値
   int i, j;
   int mcnt=0, lcnt=0, rcnt=0;
@@ -12,15 +12,21 @@ int quicksort(Data *a, int l, int r) {
   t=a[r];
   i=l-1; j=r;
   
+  puts("##########");
   while (1) {
+    mcnt++;
     while (a[++i]<t){
       mcnt++;
     }
+    mcnt++;
     while (a[--j]>t){
       mcnt++;
     }
-    if (i < j)
-      swap(a, i, j);
+    printf("t: %d, i: %d, j: %d\n", t, i, j);
+    printf("mcnt: %d\n", mcnt);
+    if (i < j){
+      swap(a, i, j); puts("swap");
+    }
     else
       break;
   }
@@ -28,8 +34,8 @@ int quicksort(Data *a, int l, int r) {
   a[r]=a[i];
   a[i]=t;
   
-  lcnt = quicksort(a, l, i-1);
-  rcnt = quicksort(a, i+1, r);
+  lcnt = quicksort(a, l, i-1); //l=1,i-1=0
+  rcnt = quicksort(a, i+1, r); //i+1=2, r=2
 
   return mcnt+lcnt+rcnt;
 }
