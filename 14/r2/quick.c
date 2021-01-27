@@ -12,18 +12,19 @@ int quicksort(Data *a, int l, int r) { //a,1,n
   t=a[r];
   i=l-1; j=r;
   
-  puts("##########");
+  // puts("##########");
   while (1) {
-    mcnt++;
-    while (a[++i]<t){
+    do{
       mcnt++;
-    }
-    mcnt++;
-    while (a[--j]>t){
+    }while (a[++i]<t); 
+    //while{}ではループ前に条件を満たすとmcnt++が実行されないため
+
+    do{
       mcnt++;
-    }
-    printf("t: %d, i: %d, j: %d\n", t, i, j);
-    printf("mcnt: %d\n", mcnt);
+    }while (a[--j]>t); 
+
+    // printf("t: %d, i: %d, j: %d\n", t, i, j);
+    // printf("mcnt: %d\n", mcnt);
     if (i < j){
       swap(a, i, j); puts("swap");
     }

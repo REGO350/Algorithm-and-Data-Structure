@@ -14,17 +14,18 @@ int main(int argc, char **argv) {
   for(j=0; j<10; j++){
     Node *root;
     n = test[j];
-    printf("data length: %d\n", n);
+    // printf("data length: %d\n", n);
     generateRandomData(dArray, n);
+    startClock();
     root = newNodeBST(dArray[0]);
+    // startClock();
     for (i = 1; i < n; i++) {
       buildBST(root, dArray[i]);
     }
-    startClock();
     saveKeyInOrder(root, dArray);
     stopClock();
     printClock();
     deleteTree(root);
-    puts("#############");
+    // puts("#############");
   }
 }

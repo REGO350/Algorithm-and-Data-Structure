@@ -32,15 +32,15 @@ int main() {
 
   for(int j=0; j<10; j++){
     n = test[j];
-    printf("data length: %d\n", n);
+    // printf("data length: %d\n", n);
     a = allocateMemoryForIntData(n+1);
     generateRandomData(a, n);
     startClock();
-    quicksort(a, 1, n);
+    quicksort(a, 1, n-1);
     stopClock();
     printClock();
     free(a);
-    puts("#############");
+    // puts("#############");
   }
 
 

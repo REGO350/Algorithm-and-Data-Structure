@@ -16,6 +16,7 @@ void stopClock() {
   st2 = val.ru_stime;
 }
 void printClock() {
-  printf("user time = %lf (sec)\n", (ut2.tv_sec-ut1.tv_sec)+(ut2.tv_usec-ut1.tv_usec)*1.0E-6);
-  printf("sys  time = %lf (sec)\n", (st2.tv_sec-st1.tv_sec)+(st2.tv_usec-st1.tv_usec)*1.0E-6);
+  // printf("user time = %lf (sec)\n", (ut2.tv_sec-ut1.tv_sec)+(ut2.tv_usec-ut1.tv_usec)*1.0E-6);
+  // printf("sys  time = %lf (sec)\n", (st2.tv_sec-st1.tv_sec)+(st2.tv_usec-st1.tv_usec)*1.0E-6);
+  printf("%lf\n", (ut2.tv_sec-ut1.tv_sec)+(ut2.tv_usec-ut1.tv_usec)*1.0E-6);
 }
