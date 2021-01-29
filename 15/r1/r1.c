@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 int main(void){
-  char c = 'P';
-  printf("%c\n",c+3);
-  printf("%c\n",c-2);
+  char c = 'A';
+  for(c=65; c<=90; c+=2)
+    printf("%c\n",c);
   return 0;
 }
